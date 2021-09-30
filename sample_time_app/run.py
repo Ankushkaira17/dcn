@@ -1,6 +1,6 @@
 from flask import Flask
 from datetime import datetime
-from pytz import timezone
+import time 
 
 app = Flask(__name__)
 
@@ -11,7 +11,7 @@ def hello_world():
 
 @app.route('/time')
 def time():
-    time = datetime.now(timezone("US/Eastern"))
+    time = datetime.now(time.timezone("US/Eastern"))
     return time.strftime("%Y : %M : %H : %S")
 
 app.run(host='0.0.0.0',
