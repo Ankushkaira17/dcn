@@ -17,7 +17,9 @@ USER nyu
 
 COPY --chown=nyu:nyu . .
 
+CMD [ "python", "./timerun.py" ]
+
 CMD [ "python", "./run.py" ]
 
-CMD [ "python", "./timerun.py" ]
+
 
